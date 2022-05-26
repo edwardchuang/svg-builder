@@ -34,6 +34,16 @@ function SvgBuilder() {
         return this;
     }
 
+    this.fontFamily = function fontFamily(value) {
+        this.root = formatRoot.call(this, 'font-family', value);
+        return this;
+    }
+    
+    this.fontSize = function fontSize(value) {
+        this.root = formatRoot.call(this, 'font-size', value);
+        return this;
+    }
+    
     this.addElement = function addElement(element) {
         if (!element.content) {
             element.node += this.closeTag(element.name);
