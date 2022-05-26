@@ -46,7 +46,7 @@ var prop = Object.defineProperty,
 
         checkAttributes: function checkAttributes() {
             for (var attr in this.attributes) {
-                if (this.permittedAttributes.indexOf(attr) !== -1) {
+                if (this.permittedAttributes.indexOf(attr) === -1) {
                     throw new Error(attr + ' is not permitted on ' + this.name + ' elements.');
                 }
             }
